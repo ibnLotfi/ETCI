@@ -1,7 +1,7 @@
 <?php 
 $titre = "Accueil";
 require 'header.php'; 
-require_once 'testPDO.php';
+require_once 'fonctions.php';
 
 
 if(!isset($_GET['char'])){
@@ -43,12 +43,6 @@ if(!isset($_GET['char'])){
     </div>
 
 </div>
-
-<a href="recherche.php">Page de recherche</a>
-
-<form action="testPDO.php" method="POST">
-<input type="submit" value="SUBMIT">
-</form>
 
 
 

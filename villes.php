@@ -1,24 +1,13 @@
 <?php 
-$titre = "Formulaire";
+$titre = "Civiles";
 require 'header.php'; 
-
-
-
-
-if(!isset($_GET['id'])){
-    $idVille = 0;
-}
-else{
-    $idVille = $_GET['id'];
-}
 
 
 ?>
 
 
 <form action="edition.php" method="POST" id="formulaire" target="_blank">
-    <h2>Formulaire de demande d'Etat civile</h2>
-    <h3>Ville : <?= $_GET['ville']?></h3>
+    <h2>Gestion des villes</h2>
     <ul>
         <li>
             <input type="hidden" name="idVille" value="<?=$idVille?>">

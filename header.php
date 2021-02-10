@@ -11,4 +11,13 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+    <header>
+      <ul>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="civiles.php">Civiles</a></li>
+          <li><a href="villes.php">Villes</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+	</header> 
+
     

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+
 body {
     background-color: whitesmoke;
+    font-family: 'Lexend Mega', sans-serif;
 }
 
 ul {
@@ -26,16 +29,29 @@ a {
 }
 
 #listeLettres ul li {
-    margin-left: 5px;
-    margin-right: 5px;
-    border: black 1px solid;
+    margin-left: 4px;
+    margin-right: 4px;
     background: none;
     color: black;
-    padding: 3px;
+    
 }
 
-#listeLettres ul li a{
-    color: black;
+#listeLettres ul li form input {
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Lexend Mega', sans-serif;
+	font-size:17px;
+	padding:9px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+#listeLettres ul li form input:hover {
+    background-color:#eb675e;
 }
 
 #listeVilles {
@@ -46,14 +62,72 @@ a {
     overflow: auto;
 }
 
-#listeVilles ul li a{
-    color: black;
-    font-size: larger;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    transition: 0.3s all ease;
+#listeVilles ul li form input{
+    width: 500px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow:inset 0px 39px 0px -24px #e77c74;
+	background-color:#e4685d;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Lexend Mega', sans-serif;
+	font-size:17px;
+	padding:9px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
 }
 
-#listeVilles li a:hover{
-   transform : scale(1.1);
+#formulaire {
+    border: black solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#formulaire ul li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+header {
+    border: 1px solid black;
+    background: #e4685d;
+    margin-bottom: 20px;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  header ul li a {
+    text-decoration:none;
+    cursor:pointer;
+      color:#ffffff;
+      font-family: 'Lexend Mega', sans-serif;
+      font-size:17px;
+  }
+
+  footer {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      background: #e4685d;
+      margin-top: 20px;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  footer ul li a {
+    color: white;
+  }
