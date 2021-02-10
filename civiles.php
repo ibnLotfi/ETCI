@@ -5,7 +5,46 @@ require 'header.php';
 
 ?>
 
+<div id="table">
+    <table id="table_id" class="display" style="width:90%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Naissance</th>
+                <th>Décès</th>
+                <th>Code Ville</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+                <td>$320,800</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Naissance</th>
+                <th>Décès</th>
+                <th>Code Ville</th>
+                <th>Genre</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
 
+
+<!--
 <form action="edition.php" method="POST" id="formulaire" target="_blank">
     <h2>Gestions des civiles</h2>
     <ul>
@@ -49,7 +88,23 @@ require 'header.php';
 
 </form>
 
-
+-->
 
 
 <?php require 'footer.php'; ?>
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable({
+        "ajax": "api_calls/allCiviles.php",
+        "columns": [
+            { "data": "id" },
+            { "data": "prenom" },
+            { "data": "nom" },
+            { "data": "date_of_birth" },
+            { "data": "date_of_death" },
+            { "data": "city_Id" },
+            { "data": "isMale" }
+        ]
+    } );
+} );
+</script>    
