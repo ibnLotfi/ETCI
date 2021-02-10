@@ -4,9 +4,7 @@
             <ul>
             <li><a href="mode_emploi.php">Mode d'emploi</a></li>
             <li><a href="index.php">Accueil</a></li>
-            <li><a href="civiles.php">Etat Civile</a></li>
-            <li><a href="villes.php">Civiles</a></li>
-            <li><a href="#">Villes</a></li>
+            <li><a href="#">Contact</a></li>
             </ul>        
         </div>
         <div class="footer_bottom">
