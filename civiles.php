@@ -6,7 +6,7 @@ require 'header.php';
 ?>
 
 <div id="table">
-    <table id="table_id" class="display" style="width:90%">
+    <table id="table_id" class="display" style="width:100%;height:450px;">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,15 +19,6 @@ require 'header.php';
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-                <td>$320,800</td>
-            </tr>
         </tbody>
         <tfoot>
             <tr>
@@ -93,9 +84,13 @@ require 'header.php';
 
 <?php require 'footer.php'; ?>
 <script>
+    
+  
+
     $(document).ready( function () {
-    $('#table_id').DataTable({
-        "ajax": "api_calls/allCiviles.php",
+        $('#table_id').DataTable({
+        ajax:{url:"api_calls/allCiviles.php",dataSrc:""},
+        //"ajax": "api_calls/allCiviles.php",
         "columns": [
             { "data": "id" },
             { "data": "prenom" },
@@ -106,5 +101,7 @@ require 'header.php';
             { "data": "isMale" }
         ]
     } );
+       
 } );
+
 </script>    

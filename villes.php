@@ -5,9 +5,29 @@ require 'header.php';
 
 ?>
 
+<div id="table">
+    <table id="table_id" class="display" style="width:100%;height:450px;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
 
+
+<!--
 <form action="edition.php" method="POST" id="formulaire" target="_blank">
-    <h2>Gestion des villes</h2>
+    <h2>Gestions des civiles</h2>
     <ul>
         <li>
             <input type="hidden" name="idVille" value="<?=$idVille?>">
@@ -49,7 +69,24 @@ require 'header.php';
 
 </form>
 
-
+-->
 
 
 <?php require 'footer.php'; ?>
+<script>
+    
+  
+
+    $(document).ready( function () {
+        $('#table_id').DataTable({
+        ajax:{url:"api_calls/allVilles.php",dataSrc:""},
+        //"ajax": "api_calls/allCiviles.php",
+        "columns": [
+            { "data": "id" },
+            { "data": "nom" }
+        ]
+    } );
+       
+} );
+
+</script>    

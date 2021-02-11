@@ -10,14 +10,19 @@ $allViles = "SELECT * from villes";
 
 try{
   $db = new PDO('mysql:host=localhost;dbname=ETCI', $user, $pass);
-  if(($db->query($query)->rowCount()) == 0){
-    echo 'pas d\'entree existante';
-  }
-  else {
-    foreach($db->query($query) as $row){
-            // -->
-            }
-  }
+  $sth = $db->prepare($allViles);
+  $sth->execute();
+  $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+  foreach($result as $row) {
+    $data[] = array( 
+       "id"=>$row['id'],
+       "nom"=>$row['nom']
+    );
+ }
+
+  //echo json_encode($data);
+  echo json_encode($data);
 
 } catch (PDOException $e) {
   print $e->getMessage();

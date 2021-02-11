@@ -51,7 +51,7 @@ else{
         </li>
 
         <li>
-            <input type="submit" value="Soumettre">
+            <input type="submit" value="Soumettre" class="btn">
         </li>
     
     
@@ -60,6 +60,9 @@ else{
 
 </form>
 
+<br>
+
+<a href="index.php" class="btn">Retour</a>
 
 
 

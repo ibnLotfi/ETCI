@@ -15,7 +15,7 @@
     <header>
       <ul>
           <li><a href="index.php">Accueil</a></li>
-          <li><a href="civiles.php">Etat Civile</a></li>
+          <li><a href="index.php">Etat Civile</a></li>
           <li><a href="civiles.php">Civiles</a></li>
           <li><a href="villes.php">Villes</a></li>
       </ul>

@@ -12,10 +12,22 @@ try{
   $db = new PDO('mysql:host=localhost;dbname=ETCI', $user, $pass);
   $sth = $db->prepare($allCiviles);
   $sth->execute();
-  $data = $sth->fetchAll(PDO::FETCH_ASSOC);
+  $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-  //return json_encode($data);
-  return $data;
+  foreach($result as $row) {
+    $data[] = array( 
+       "id"=>$row['id'],
+       "prenom"=>$row['prenom'],
+       "nom"=>$row['nom'],
+       "date_of_birth"=>$row['date_of_birth'],
+       "date_of_death"=>$row['date_of_death'],
+       "city_Id"=>$row['city_Id'],
+       "isMale"=>$row['isMale']
+    );
+ }
+
+  //echo json_encode($data);
+  echo json_encode($data);
 
 } catch (PDOException $e) {
   print $e->getMessage();
