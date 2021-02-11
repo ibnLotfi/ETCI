@@ -149,3 +149,36 @@ header {
   .btn:hover {
     background-color:#942911;
   }
+
+  #form_ajout_civile {
+      border: brown 1px solid;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  #form_ajout_civile div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#form_ajout_civile div input{
+    width: 30%;
+}
+
+#form_ajout_civile div select{
+    margin-right: 5px;
+    width: 40%;
+}
+
+
+
+  #form_ajout_villes {
+    border: brown 1px solid;
+    display: flex;
+    flex-direction: column;
+}

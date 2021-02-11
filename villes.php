@@ -1,11 +1,23 @@
 <?php 
 $titre = "Civiles";
 require 'header.php'; 
-
-
 ?>
 
+<div id="form_ajout_ville">
+    <form action="">
+            <h2 style='text-align : center'>Ajout nouvelle ville</h2>
+            <div>
+                <input type="text" name="" id="" placeholder="Nom">
+                <input type="text" name="" id="" placeholder="Prénom">
+            </div>
+            <div>
+                <input type="submit" class="retour" name="" value="Envoyer" id="" placeholder="">
+            </div>
+    </form>
+</div>
+
 <div id="table">
+    <h2 style='text-align : center'>Liste des villes</h2>
     <table id="table_id" class="display" style="width:100%;height:450px;">
         <thead>
             <tr>

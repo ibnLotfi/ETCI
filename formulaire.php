@@ -2,17 +2,12 @@
 $titre = "Formulaire";
 require 'header.php'; 
 
-
-
-
 if(!isset($_GET['id'])){
     $idVille = 0;
 }
 else{
     $idVille = $_GET['id'];
 }
-
-
 ?>
 
 
