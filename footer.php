@@ -16,6 +16,7 @@
         </div>
         <div class="footer_bottom">
             <h3>ETCI v0.1 2021</h3>
+            <a href="deconnexion.php">Se déconnecter</a>
         </div>
     </footer>
 </html>

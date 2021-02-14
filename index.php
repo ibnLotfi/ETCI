@@ -1,4 +1,5 @@
 <?php 
+
 $titre = "Accueil";
 require 'header.php'; 
 require_once 'fonctions.php';
