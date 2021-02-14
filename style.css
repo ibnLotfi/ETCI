@@ -189,3 +189,54 @@ header {
 #form_ajout_ville div{
     margin: 5px 10px 5px 10px;
 }
+
+.allRed {
+    background: #e4685d;
+}
+
+#authentification {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #bebebeb2;
+    height: 600px;
+    width: 600px;
+    margin: 60px auto;
+}
+
+#authentification div,
+#authentification div form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#authentification div form input{
+    width: 400px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+#authButton {
+    box-shadow: 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+	background-color:#ffffff;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+#authButton:hover {
+    background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+	background:#000000;
+    color:#ffffff;
+}

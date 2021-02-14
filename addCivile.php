@@ -38,8 +38,8 @@ require_once 'api_calls/select_allVilles.php';
                     <input type="radio" name="sexe" id="feminin" value="0" required>
                     
                 </fieldset>
-                <fieldset>
-                    <label for="ville">Ville :</label>
+                <fieldset style="margin-top:10px">
+                    <legend>Ville :</legend>
                     <select name="ville" id="ville">
                         <option value="-1">-- Veuillez selectionner une ville --</option>
                         <?php
