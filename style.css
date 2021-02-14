@@ -133,7 +133,7 @@ header {
     color: white;
   }
 
-  .btn {
+  .btn, input[type="submit"] {
     background-color:#e4685d;
 	/*border:4px solid #e4685d;*/
 	display:inline-block;
@@ -160,19 +160,17 @@ header {
 
   #form_ajout_civile div{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 #form_ajout_civile div input{
-    width: 30%;
+    margin: 5px 10px 5px 10px;
 }
 
 #form_ajout_civile div select{
-    margin-right: 5px;
-    width: 40%;
+    width: 250px;
 }
 
 

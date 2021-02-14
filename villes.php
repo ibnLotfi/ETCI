@@ -3,12 +3,22 @@ $titre = "Civiles";
 require 'header.php'; 
 ?>
 
+
+<div id='message' style="margin-top=10px;color:red;">
+    <?php 
+        if(isset($_GET['message'])){
+            echo $_GET['message'];
+            echo " !";
+        }
+    ?>
+</div>
+
 <div id="form_ajout_ville">
-    <form action="">
+    <form action="creationEntitie/ajoutVille.php" method="POST">
             <h2 style='text-align : center'>Ajout nouvelle ville</h2>
             <div>
-                <input type="text" name="" id="" placeholder="Nom">
-                <input type="text" name="" id="" placeholder="Prénom">
+                <label for="nom"></label>
+                <input type="text" name="nom" id="nom" placeholder="Nom">
             </div>
             <div>
                 <input type="submit" class="retour" name="" value="Envoyer" id="" placeholder="">

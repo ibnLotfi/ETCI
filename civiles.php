@@ -1,12 +1,21 @@
 <?php 
 $titre = "Civiles";
 require 'header.php'; 
-
-
+require_once 'api_calls/select_allVilles.php'; 
 ?>
 
+
+<div id='message' style="margin-top=10px;color:red;">
+    <?php 
+        if(isset($_GET['message'])){
+            echo $_GET['message'];
+            echo " !";
+        }
+    ?>
+</div>
+
 <div id="form_ajout_civile">
-    <form action="">
+    <form action="creationEntitie/ajoutCivile.php" method="POST">
             <h2 style='text-align : center'>Ajout nouveau civile</h2>
             <div>
                 <label for="nom">Nom :</label>
@@ -16,9 +25,9 @@ require 'header.php';
             </div>
             <div>
                 <label for="dateNais">Date de naissance :</label>
-                <input type="date" id="dateNais" name="date" min="1880" max="2021" required>
+                <input type="datetime-local" id="dateNais" name="dateNais" min="1800-06-07T00:00" max="2021-06-07T00:00" required>
                 <label for="dateMort">Date de décès (optionel) :</label>
-                <input type="date" id="dateMort" name="date" min="1880" max="2021" required>
+                <input type="datetime-local" id="dateMort" name="dateMort" min="1800-06-07T00:00" max="2021-06-07T00:00">
             </div>
             <div>
                 <label for="masculin">Masculin</label>
@@ -27,9 +36,10 @@ require 'header.php';
                 <input type="radio" name="sexe" id="feminin" value="0" required>
                 <label for="ville">Ville :</label>
                 <select name="ville" id="ville">
-                    <option>Paris</option>
-                    <option>Lyon</option>
-                    <option>Lille</option>
+                    <option value="-1">-- Veuillez selectionner une ville --</option>
+                    <?php
+                        SelectAllVilles()
+                    ?>
                 </select>
             </div>
            
