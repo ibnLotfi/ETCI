@@ -15,8 +15,8 @@
     <header>
       <ul>
           <li><a href="index.php">Etat Civile</a></li>
-          <li><a href="civiles.php">Liste Civile</a></li>
-          <li><a href="addCivile.php">Ajout Civile</a></li>
+          <li><a href="civiles.php">Liste des Personnes</a></li>
+          <li><a href="addCivile.php">Ajouter une Personne</a></li>
           <li><a href="villes.php">Liste Villes</a></li>
       </ul>
 	</header> 

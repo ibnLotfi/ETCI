@@ -1,7 +1,7 @@
 <?php 
 
 if($_POST['ville'] === "-1"){
-    header("Location: ../civiles.php?message=Veuillez selectionner une ville");
+    header("Location: ../addCivile.php?message=Veuillez selectionner une ville");
 }
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
@@ -43,7 +43,7 @@ try{
     $stmt->execute($data);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if(count($result) > 0){
-        header("Location: ../civiles.php?message=" . $prenom . ' ' . $nom . ' existe déjà dans la base de données');
+        header("Location: ../addCivile.php?message=" . $prenom . ' ' . $nom . ' existe déjà dans la base de données');
     }else{
         $stmt = $db->prepare("INSERT INTO CIVILES (prenom,nom,date_of_birth,date_of_death,city_id,isMale) VALUES (:prenom,:nom,:date_of_birth,:date_of_death,:city_id,:isMale)");
         $stmt->bindParam(':prenom', $prenom);
@@ -53,7 +53,7 @@ try{
         $stmt->bindParam(':city_id', $ville);
         $stmt->bindParam(':isMale', $sexe);
         $stmt->execute();
-        header("Location: ../civiles.php?message=" . $prenom . ' ' . $nom . ' as bien été ajouté');
+        header("Location: ../addCivile.php?message=" . $prenom . ' ' . $nom . ' as bien été ajouté');
     }   
 }catch (PDOException $e) {
     print $e->getMessage();
