@@ -15,9 +15,9 @@ require 'header.php';
 
 <div id="form_ajout_ville">
     <form action="creationEntitie/ajoutVille.php" method="POST">
-            <h2 style='text-align : center'>Ajout nouvelle ville</h2>
+            <h2 style='text-align : center'>Ajouter une nouvelle ville</h2>
             <div>
-                <label for="nom"></label>
+                <label for="nom">Nom de la ville :</label>
                 <input type="text" name="nom" id="nom" placeholder="Nom">
             </div>
             <div>
